@@ -1,0 +1,14 @@
+
+public class Prototype
+{
+    private Prototype instance = new Prototype();
+
+    public Prototype()
+    {
+
+    }
+    public Prototype clone()
+    {
+        return instance.clone();
+    }
+}

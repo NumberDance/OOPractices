@@ -1,0 +1,8 @@
+
+public class FactoryMethod<Type>
+{
+    public static Type returnChosenInstance()
+    {
+
+    }
+}

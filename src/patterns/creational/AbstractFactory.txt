@@ -1,0 +1,10 @@
+
+public class AbstractFactory<Type>
+{
+    public static Type returnChosenFactory()
+    {
+
+    }
+}
+
+
