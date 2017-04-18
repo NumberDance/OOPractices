@@ -1,0 +1,10 @@
+
+public class Flyweight
+{
+    private Flyweight cache;
+
+    public void updateCache(Flyweight cache)
+    {
+        this.cache = cache;
+    }
+}

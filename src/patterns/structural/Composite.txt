@@ -1,0 +1,34 @@
+import java.util.LinkedList;
+
+public class Composite
+{
+    private Composite parent;
+    private LinkedList<Composite> children = new LinkedList<>();
+
+    public Composite()
+    {
+        this.parent = null;
+    }
+    public Composite(Composite parent)
+    {
+        this.parent = parent;
+    }
+
+    public void addChild(Composite child)
+    {
+        children.add(child);
+    }
+    public void removeChild(Composite child)
+    {
+        children.remove(child);
+    }
+
+    public Composite getParent()
+    {
+        return parent;
+    }
+    public void getChild()
+    {
+        return child;
+    }
+}

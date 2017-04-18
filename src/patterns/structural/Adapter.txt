@@ -1,0 +1,16 @@
+
+public class Adapter
+{
+    private void LegacyObject legacy;
+    private void LatestObject latest;
+
+    public Adapter(LegacyObject legacy, LatestObject latest)
+    {
+        this.legacy = legacy;
+        this.latest = latest;
+    }
+    public void processLegacyObject()
+    {
+
+    }
+}

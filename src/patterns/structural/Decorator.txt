@@ -1,0 +1,14 @@
+
+public class Decorator
+{
+    private final Decorator feature;
+
+    public final void selectFeature(Decorator feature)
+    {
+        this.feature = feature;
+    }
+    public final void runFeature()
+    {
+
+    }
+}
