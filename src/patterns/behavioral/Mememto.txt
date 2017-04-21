@@ -1,0 +1,28 @@
+import java.util.LinkedList;
+
+public class Mememto
+{
+    private LinkedList<Mememto> past = new LinkedList<>();
+    private LinkedList<Mememto> future = new LinkedList<>();
+
+    private void overwrite()
+    {
+        past.add(this);
+        future.clear();
+    }
+
+    public void undo()
+    {
+        Mememto previous = past.getLast();
+        past.remove(previous);
+
+        future.add(this);
+    }
+    public void redo()
+    {
+        Mememto next = future.getLast();
+        future.remove(next);
+
+        past.add(this);
+    }
+}

@@ -3,3 +3,8 @@ public interface Bridge
 {
 
 }
+
+class BridgeImplementation implements Bridge
+{
+
+}

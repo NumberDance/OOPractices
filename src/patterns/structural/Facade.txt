@@ -1,5 +1,10 @@
 
 public interface Facade
 {
-    
+    private FacadeClass wrapped;
+}
+
+class FacadeClass
+{
+
 }

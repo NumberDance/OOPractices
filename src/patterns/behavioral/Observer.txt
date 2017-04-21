@@ -1,0 +1,34 @@
+import java.util.HashSet;
+
+public class Observer
+{
+    private HashSet<Observer> observers = new HashSet<>();
+
+    public void notify(Observer watched)
+    {
+        if(watched == this)
+        {
+            for(Observer observer : observers)
+            {
+                observer.notify(this);
+            }
+        }
+        else
+        {
+            this.update(watched);
+        }
+    }
+    private void update(Observer watched)
+    {
+
+    }
+
+    public void attach(Observer observed)
+    {
+        observers.add(observed);
+    }
+    public void detach(Observer observed)
+    {
+        observers.remove(observed);
+    }
+}

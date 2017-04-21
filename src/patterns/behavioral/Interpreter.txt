@@ -1,0 +1,14 @@
+
+public class Interpreter
+{
+    private StringBuilder regex = new StringBuilder("");
+
+    public Interpreter()
+    {
+
+    }
+    public void interpret(String input)
+    {
+
+    }
+}

@@ -1,0 +1,11 @@
+
+public class Mediator
+{
+    public FirstPeer first;
+    public SecondPeer second;
+
+    public Mediator()
+    {
+
+    }
+}

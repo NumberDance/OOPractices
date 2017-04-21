@@ -1,0 +1,19 @@
+
+public class Proxy
+{
+    private Proxy instance = null;
+
+    public Proxy demand()
+    {
+        if(instance == null)
+        {
+            createOnDemand();
+        }
+
+        return instance;
+    }
+    private void createOnDemand()
+    {
+
+    }
+}

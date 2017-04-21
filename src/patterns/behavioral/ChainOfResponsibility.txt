@@ -1,0 +1,21 @@
+
+public class ChainOfResponsibility
+{
+    private ChainOfResponsibility next = null;
+
+    public Request handleRequest()
+    {
+
+    }
+    private Request delegateRequest()
+    {
+        if(next != null)
+        {
+            return next.handleRequest();
+        }
+        else
+        {
+            return null;
+        }
+    }
+}
