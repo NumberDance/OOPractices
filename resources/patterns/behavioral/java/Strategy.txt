@@ -1,0 +1,22 @@
+package patterns.behavioral;
+
+public interface Strategy 
+{
+    private OptionOne one = null;
+    private OptionTwo two = null;
+
+    public void decide()
+    {
+
+    }
+}
+
+class OptionOne
+{
+
+}
+
+class OptionTwo
+{
+
+}

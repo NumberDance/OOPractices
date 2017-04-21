@@ -4,7 +4,7 @@ public class Observer
 {
     private HashSet<Observer> observers = new HashSet<>();
 
-    public void notify(Observer watched)
+    public void notify(Observer observed)
     {
         if(watched == this)
         {
@@ -15,7 +15,7 @@ public class Observer
         }
         else
         {
-            this.update(watched);
+            this.update(observed);
         }
     }
     private void update(Observer watched)
@@ -23,12 +23,12 @@ public class Observer
 
     }
 
-    public void attach(Observer observed)
+    public void attach(Observer observer)
     {
-        observers.add(observed);
+        observers.add(observer);
     }
-    public void detach(Observer observed)
+    public void detach(Observer observer)
     {
-        observers.remove(observed);
+        observers.remove(observer);
     }
 }
