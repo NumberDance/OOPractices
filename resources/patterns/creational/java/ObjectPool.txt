@@ -1,7 +1,7 @@
 import java.util.Iterator;
 import java.util.HashSet;
 
-public class ObjectPool<Type>
+public class ObjectPool
 {
     private HashSet<Type> pool;
     private int size;
@@ -11,7 +11,7 @@ public class ObjectPool<Type>
         this.size = size;
     }
 
-    public ObjectPool acquireReusable()
+    public Type acquireReusable()
     {
         Type reusable = pool.iterator().next();
         pool.remove(reusable);
