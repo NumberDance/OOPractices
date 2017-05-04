@@ -3,7 +3,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
 import java.net.URISyntaxException;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -27,26 +26,56 @@ public class OOPractices
         ClassLoader loader = new OOPractices().getClass().getClassLoader();
         InputStream input = null;
         
+        String behavioral = "patterns/behavioral/java/";
+        String creational = "patterns/creational/java/";
+        String structural = "patterns/structural/java/";
+        
         switch(pattern)
         {
             case "AbstractFactory":
-                input = loader.getResourceAsStream("patterns/creational/java/AbstractFactory.txt");
+                input = loader.getResourceAsStream(creational + pattern + ".txt");
+                parameters.put("Type",args[2]);
             break;
             case "Builder":
-                input = loader.getResourceAsStream("patterns/creational/java/Builder.txt");
+                input = loader.getResourceAsStream(creational + pattern + ".txt");
             break;
             case "FactoryMethod":
-                input = loader.getResourceAsStream("patterns/creational/java/FactoryMethod.txt");
+                input = loader.getResourceAsStream(creational + pattern + ".txt");
+                parameters.put("Type",args[2]);
             break;
             case "ObjectPool":
-                input = loader.getResourceAsStream("patterns/creational/java/ObjectPool.txt");
+                input = loader.getResourceAsStream(creational + pattern + ".txt");
                 parameters.put("Type",args[2]);
             break;
             case "Prototype":
-                input = loader.getResourceAsStream("patterns/creational/java/Prototype.txt");
+                input = loader.getResourceAsStream(creational + pattern + ".txt");
             break;
             case "Singleton":
-                input = loader.getResourceAsStream("patterns/creational/java/Singleton.txt");
+                input = loader.getResourceAsStream(creational + pattern + ".txt");
+            break;
+            
+            case "Adapter":
+                input = loader.getResourceAsStream(structural + pattern + ".txt");
+                parameters.put("LegacyObject",args[2]);
+                parameters.put("LatestObject",args[3]);
+            break;
+            case "Bridge":
+                input = loader.getResourceAsStream(structural + pattern + ".txt");
+            break;
+            case "Composite":
+                input = loader.getResourceAsStream(structural + pattern + ".txt");
+            break;
+            case "Decorator":
+                input = loader.getResourceAsStream(structural + pattern + ".txt");
+            break;
+            case "Facade":
+                input = loader.getResourceAsStream(structural + pattern + ".txt");
+            break;
+            case "Flyweight":
+                input = loader.getResourceAsStream(structural + pattern + ".txt");
+            break;
+            case "Proxy":
+                input = loader.getResourceAsStream(structural + pattern + ".txt");
             break;
         }
         
@@ -66,7 +95,7 @@ public class OOPractices
             generated = generated.replaceAll(pattern,name);
             for(Map.Entry<String, String> entry : parameters.entrySet())
             {
-                    generated = generated.replace(entry.getKey(),entry.getValue());
+                generated = generated.replace(entry.getKey(),entry.getValue());
             }
             
             PrintWriter writer = new PrintWriter(new FileWriter(name + ".java"));

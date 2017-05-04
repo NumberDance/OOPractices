@@ -1,5 +1,5 @@
 
-public class AbstractFactory<Type>
+public class AbstractFactory
 {
     public static Type returnChosenFactory()
     {

@@ -1,5 +1,5 @@
 
-public class FactoryMethod<Type>
+public class FactoryMethod
 {
     public static Type returnChosenInstance()
     {

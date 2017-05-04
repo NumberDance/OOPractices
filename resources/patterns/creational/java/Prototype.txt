@@ -1,8 +1,12 @@
 
 public class Prototype
 {
+    private Prototype()
+    {
+        
+    }
     public Prototype clone()
     {
-        return instance.clone();
+        return this.clone();
     }
 }
